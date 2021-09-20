@@ -15,6 +15,6 @@ Coming soon...👷‍♂️🚧
 My contribuction its only this CLI. All credit by develop TriggerCMD CLI is to [Russell VanderMey](https://github.com/rvmey/).
 
 
-## Full Documentation
+### Full Documentation
 
 Coming soon... 👷‍♂️🚧

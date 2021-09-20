@@ -1,5 +1,7 @@
 # TriggerCMD CLI
 
+[![Build Status](https://app.travis-ci.com/GussSoares/triggercmd-cli.svg?branch=main)](https://app.travis-ci.com/GussSoares/triggercmd-cli)
+
 Developed for Arch Linux users because there is no package built for Arch Linux based distributions.
 
 ### Requirement

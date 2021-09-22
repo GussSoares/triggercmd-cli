@@ -7,5 +7,6 @@ install:
   - source $HOME/.poetry/env
 
 script:
+  - poetry update
   - poetry install
   - triggercmd -v

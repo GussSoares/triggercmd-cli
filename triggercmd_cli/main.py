@@ -15,7 +15,7 @@ def get_version(version: bool):
     if version:
         typer.echo(
             f"\n{Figlet(font='slant').renderText('TriggerCMD CLI')}\n"
-            "\nTriggerCMD CLI Version: {__version__}\n"
+            f"\nTriggerCMD CLI Version: {__version__}\n"
         )
         raise typer.Exit()
     else:

@@ -1,8 +1,19 @@
 [tool.poetry]
-name = "triggercmd-cli"
+name = "triggercmd"
 version = "0.1.0"
-description = ""
-authors = ["GussSoares <gustavo.soares.cdc@gmail.com>"]
+description = "Linux CLI client to TriggerCMD cloud service agent."
+authors = ["Gustavo Soares <gustavo.soares.cdc@gmail.com>", "Madson Dias <madsonddias@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/GussSoares/triggercmd-cli"
+repository = "https://github.com/GussSoares/triggercmd-cli"
+keywords = ["triggercmd", "alexa", "echo-dot", "cli", "archlinux", "manjaro"]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+packages = [{ include = "triggercmd_cli" }]
+
 
 [tool.poetry.dependencies]
 python = "^3.8"

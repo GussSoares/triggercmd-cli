@@ -1,10 +1,4 @@
-# TriggerCMD CLI
-
-[![Build Status](https://app.travis-ci.com/GussSoares/triggercmd-cli.svg?branch=main)](https://app.travis-ci.com/GussSoares/triggercmd-cli)
-
-
-
-# fuzzy-c-means
+# TriggerCMD CLI client
 
 ![GitHub](https://img.shields.io/github/license/GussSoares/triggercmd-cli.svg)
 [![PyPI](https://img.shields.io/pypi/v/triggercmd.svg)](http://pypi.org/project/triggercmd/)

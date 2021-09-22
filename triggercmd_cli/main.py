@@ -3,11 +3,12 @@ from pyfiglet import Figlet
 from rich.console import Console
 
 from triggercmd_cli import __version__
-from triggercmd_cli.command.command import command_app
+from triggercmd_cli.command.command import command_app as app
 
-app = typer.Typer(help=__doc__)
+# app = typer.Typer(help=__doc__)
 console = Console()
-app.add_typer(command_app, name="command")
+app.help = __doc__
+# app.add_typer(command_app, name="command")
 
 
 def get_version(version: bool):
@@ -40,3 +41,7 @@ def run():
         app()
     except Exception as e:
         console.print(f"[red]Error:[/] {e}")
+
+
+if __name__ == "__main__":
+    run()

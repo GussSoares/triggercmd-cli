@@ -1,3 +1,16 @@
+"""
+TriggerCMD CLI
+
+Linux CLI client to TriggerCMD cloud service agent.
+
+You probably want to install completion for the typer command.
+If you are using bash, try to type:
+
+$ triggercmd --install-completion bash
+
+https://github.com/GussSoares/triggercmd-cli
+"""
+
 import time
 
 import typer
@@ -8,7 +21,7 @@ from triggercmd_cli.command.entities import Command
 from triggercmd_cli.command.wizard import CommandWizard
 from triggercmd_cli.utils import functions
 
-command_app = typer.Typer(help="Manage your commands.")
+command_app = typer.Typer(help=__doc__)
 console = Console()
 
 

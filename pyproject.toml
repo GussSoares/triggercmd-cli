@@ -9,6 +9,8 @@ python = "^3.8"
 typer = "^0.4.0"
 inquirerpy = "^0.2.4"
 rich = "^10.9.0"
+pyfiglet = "^0.8.post1"
+requests = "^2.26.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

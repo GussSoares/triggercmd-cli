@@ -72,6 +72,7 @@ def list():
     table.add_column("Command")
     table.add_column("Ground")
     table.add_column("Voice")
+    table.add_column("Allow Params")
 
     for row in data:
         table.add_row(
@@ -79,9 +80,29 @@ def list():
             row.get("command"),
             row.get("ground"),
             row.get("voice"),
+            row.get("allowParams"),
         )
 
     console.print()
     console.rule("TriggerCMD")
     console.print(table)
     console.rule("")
+
+
+@command_app.command(help="Test a commands.")
+def test(trigger: str = typer.Option("", help="Trigger name")):
+    console.rule("Test a command")
+
+    if not trigger:
+        commands = functions.get_command_titles()
+        trigger = CommandWizard.select_command(commands).get("trigger")
+
+    response, status = Command.test("lenovo", trigger)
+
+    if status == 200:
+        message = f"[green]Success[/] {response.get('message')}"
+    else:
+        message = f"[red]Error[/] {response.get('error').get('response')}"
+
+    console.print(message)
+    console.rule()

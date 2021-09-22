@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(
-    name="triggercmd-cli",
+    name="triggercmd_cli",
     version="0.1.0",
     url="https://github.com/GussSoares/triggercmd-cli",
     license="MIT License",

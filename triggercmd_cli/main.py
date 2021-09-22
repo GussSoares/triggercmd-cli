@@ -1,17 +1,24 @@
 import typer
+from pyfiglet import Figlet
+from rich.console import Console
 
 from triggercmd_cli import __version__
 from triggercmd_cli.command.command import command_app
 
 app = typer.Typer(help=__doc__)
-
+console = Console()
 app.add_typer(command_app, name="command")
 
 
 def get_version(version: bool):
     if version:
-        typer.echo(f"\nTriggerCMD CLI Version: {__version__}\n")
+        typer.echo(
+            f"\n{Figlet(font='slant').renderText('TriggerCMD CLI')}\n"
+            "\nTriggerCMD CLI Version: {__version__}\n"
+        )
         raise typer.Exit()
+    else:
+        typer.echo(f"\n{Figlet(font='slant').renderText('TriggerCMD CLI')}")
 
 
 @app.callback()
@@ -29,4 +36,7 @@ def main(
 
 
 def run():
-    app()
+    try:
+        app()
+    except Exception as e:
+        console.print(f"[red]Error:[/] {e}")

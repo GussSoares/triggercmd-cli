@@ -28,7 +28,10 @@ class CommandWizard:
                 default="",
                 validate=lambda v: len(v) > 0,
             ).execute(),
-            "allowParams": "false",
+            "allowParams": inquirer.select(
+                message="Allow Params?",
+                choices=["false", "true"],
+            ).execute(),
         }
 
     @staticmethod
@@ -54,7 +57,11 @@ class CommandWizard:
                 default=initial["voice"],
                 validate=lambda v: len(v) > 0,
             ).execute(),
-            "allowParams": "false",
+            "allowParams": inquirer.select(
+                message="Allow Params?",
+                default=initial["allowParams"],
+                choices=["false", "true"],
+            ).execute(),
         }
 
     @staticmethod

@@ -14,6 +14,8 @@ the `triggercmd` package is available in [PyPI](https://pypi.org/project/trigger
 ```
 pip install triggercmd
 ```
+Or using the [pipx](https://github.com/pypa/pipx) for a safer installation.
+
 After install, you can use the triggercmd CLI client to manipulate commands on the TRIGGERcmd agent.
 
 ## commands

@@ -11,15 +11,18 @@ $ triggercmd --install-completion bash
 https://github.com/GussSoares/triggercmd-cli
 """
 
+import os
+import subprocess
 import time
+from pathlib import Path
 
 import typer
 from rich.console import Console
 from rich.table import Table
 
-from triggercmd_cli.command.entities import Command
+from triggercmd_cli.command.entities import Command, TriggerCMDAgent
 from triggercmd_cli.command.wizard import CommandWizard
-from triggercmd_cli.utils import functions
+from triggercmd_cli.utils import exceptions, functions
 
 command_app = typer.Typer(help=__doc__)
 console = Console()
@@ -119,3 +122,21 @@ def test(trigger: str = typer.Option("", help="Trigger name")):
 
     console.print(message)
     console.rule()
+
+
+@command_app.command(help="Download and install TriggerCMD Agent")
+def install():
+    console.rule("Installing")
+    try:
+        TriggerCMDAgent.clone()
+    except exceptions.AlreadyCloned:
+        console.print("[blue]Info:[/] TriggerCMD is already cloned, ignoring...\n")
+
+    TriggerCMDAgent.install_dependecies()
+    console.print("\n[green]Success![/] TriggerCMD Agent installed. Please type `triggercmd run`.")
+
+
+@command_app.command(help="Run TriggerCMD Agent")
+def run():
+    console.rule("Running")
+    TriggerCMDAgent.run()

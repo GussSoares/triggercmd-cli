@@ -1,8 +1,11 @@
+import os
+import subprocess
+from pathlib import Path
 from typing import Tuple
 
 import requests
 
-from triggercmd_cli.utils import functions
+from triggercmd_cli.utils import constants, exceptions, functions
 
 
 class Command:
@@ -52,6 +55,39 @@ class Command:
     @staticmethod
     def test(computer_name: str, trigger_name: str):
         return TriggerCMDAPI.run_command(computer_name, trigger_name)
+
+
+class TriggerCMDAgent:
+    @staticmethod
+    def clone():
+        os.chdir(Path.home() / Path("Sandbox"))
+        if Path(Path.home() / Path("Sandbox/TRIGGERcmd-Agent")).exists():
+            raise exceptions.AlreadyCloned
+
+        subprocess.run(
+            args=f"git clone {constants.REPO_TRIGGERCMD_AGENT}", shell=True,
+        )
+
+    @staticmethod
+    def install_dependecies():
+        constants.BASE_PATH_AGENT
+        os.chdir(Path.home() / Path("Sandbox"))
+        if Path(Path.home() / Path("Sandbox/TRIGGERcmd-Agent")).exists():
+            subprocess.run(
+                args=f"yarn",
+                shell=True,
+            )
+        else:
+            raise exceptions.NotInstalled
+
+    @staticmethod
+    def run():
+        if Path(Path.home() / Path("TRIGGERcmd-Agent")).exists():
+            subprocess.run(
+                "node ~/TRIGGERcmd-Agent/src/agent.js --console", shell=True
+            )
+        else:
+            raise exceptions.NotInstalled
 
 
 class TriggerCMDAPI:

@@ -1,5 +1,6 @@
 # TriggerCMD CLI client
 [![Build Status](https://app.travis-ci.com/GussSoares/triggercmd-cli.svg?branch=main)](https://app.travis-ci.com/GussSoares/triggercmd-cli)
+[![Publish package](https://github.com/GussSoares/triggercmd-cli/actions/workflows/publish-package-on-release.yaml/badge.svg)](https://github.com/GussSoares/triggercmd-cli/actions/workflows/publish-package-on-release.yaml)
 ![GitHub](https://img.shields.io/github/license/GussSoares/triggercmd-cli.svg)
 [![PyPI](https://img.shields.io/pypi/v/triggercmd.svg)](http://pypi.org/project/triggercmd/)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/w/GussSoares/triggercmd-cli.svg)](https://github.com/GussSoares/triggercmd/pulse)

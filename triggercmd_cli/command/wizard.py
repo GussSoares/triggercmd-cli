@@ -39,27 +39,27 @@ class CommandWizard:
         return {
             "trigger": inquirer.text(
                 message="Type the command name:",
-                default=initial["trigger"],
+                default=initial.get("trigger"),
                 validate=lambda v: len(v) > 0,
             ).execute(),
             "command": inquirer.text(
                 message="Type the command:",
-                default=initial["command"],
+                default=initial.get("command"),
                 validate=lambda v: len(v) > 0,
             ).execute(),
             "ground": inquirer.select(
                 message="Select a command ground:",
                 choices=["foreground", "background"],
-                default=initial["ground"],
+                default=initial.get("ground"),
             ).execute(),
             "voice": inquirer.text(
                 message="Type the command voice:",
-                default=initial["voice"],
+                default=initial.get("voice"),
                 validate=lambda v: len(v) > 0,
             ).execute(),
             "allowParams": inquirer.select(
                 message="Allow Params?",
-                default=initial["allowParams"],
+                default=initial.get("allowParams"),
                 choices=["false", "true"],
             ).execute(),
         }

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "triggercmd"
-version = "0.3.0"
+version = "0.3.1"
 description = "Linux CLI client to TriggerCMD cloud service agent."
 authors = ["Gustavo Soares <gustavo.soares.cdc@gmail.com>", "Madson Dias <madsonddias@gmail.com>"]
 license = "MIT"

@@ -1,4 +1,5 @@
 # TriggerCMD CLI client
+
 [![Build Status](https://app.travis-ci.com/GussSoares/triggercmd-cli.svg?branch=main)](https://app.travis-ci.com/GussSoares/triggercmd-cli)
 [![Publish package](https://github.com/GussSoares/triggercmd-cli/actions/workflows/publish-package-on-release.yaml/badge.svg)](https://github.com/GussSoares/triggercmd-cli/actions/workflows/publish-package-on-release.yaml)
 ![GitHub](https://img.shields.io/github/license/GussSoares/triggercmd-cli.svg)
@@ -7,6 +8,8 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/GussSoares/triggercmd-cli.svg)](https://github.com/GussSoares/triggercmd-cli/commit/main)
 [![Downloads](https://pepy.tech/badge/triggercmd)](https://pepy.tech/project/triggercmd)
 
+<img src='triggerCMD_CLI_logo.png' style='display: block; margin-left: auto; margin-right: auto; width: 100%;'>
+<br>
 
 `triggercmd` is a CLI client for the [TRIGGERcmd][1] cloud service.
 

@@ -8,8 +8,11 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/GussSoares/triggercmd-cli.svg)](https://github.com/GussSoares/triggercmd-cli/commit/main)
 [![Downloads](https://pepy.tech/badge/triggercmd)](https://pepy.tech/project/triggercmd)
 
-<img src='triggerCMD_CLI_logo.png' style='display: block; margin-left: auto; margin-right: auto; width: 100%;'>
-<br>
+<!-- <img src='triggerCMD_CLI_logo.png' style='display: block; margin-left: auto; margin-right: auto; width: 100%;'>
+<br> -->
+<p align="center">
+    <img src="assets/trigger.gif" width="600" alt="Glow UI Demo">
+</p>
 
 `triggercmd` is a CLI client for the [TRIGGERcmd][1] cloud service.
 

@@ -6,13 +6,13 @@ from triggercmd_cli.utils import constants, exceptions
 
 
 def load_json_file(path: Union[Path, str] = constants.COMMAND_FILE_PATH) -> List[dict]:
-    with open(path) as json_file:
+    with open(path, encoding="utf-8") as json_file:
         return json.load(json_file)
 
 
 def update_json_file(data: List[dict]):
-    with open(constants.COMMAND_FILE_PATH, "w+") as json_file:
-        json_file.write(json.dumps(data, indent=4, sort_keys=True))
+    with open(constants.COMMAND_FILE_PATH, "w+", encoding="utf-8") as json_file:
+        json_file.write(json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False))
 
 
 def get_command_titles():

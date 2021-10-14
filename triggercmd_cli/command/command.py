@@ -11,10 +11,7 @@ $ triggercmd --install-completion bash
 https://github.com/GussSoares/triggercmd-cli
 """
 
-import os
-import subprocess
 import time
-from pathlib import Path
 
 import typer
 from rich.console import Console
@@ -126,6 +123,7 @@ def test(trigger: str = typer.Option("", help="Trigger name")):
 
 @command_app.command(help="Download and install TriggerCMD Agent")
 def install():
+    # TODO: precisa instalar dentro do /usr/share
     console.rule("Installing")
     try:
         TriggerCMDAgent.clone()

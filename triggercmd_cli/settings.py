@@ -1,0 +1,3 @@
+DEFAULT_METHOD="http://"
+DEFAULT_PORT=9075
+DEFAULT_HOST="localhost"

@@ -17,7 +17,7 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from triggercmd_cli.command.entities import Command, TriggerCMDAgent
+from triggercmd_cli.command.entities import Command, TriggerCMDAgent, TriggerCMDUI
 from triggercmd_cli.command.wizard import CommandWizard
 from triggercmd_cli.utils import exceptions, functions
 
@@ -122,19 +122,46 @@ def test(trigger: str = typer.Option("", help="Trigger name")):
 
 
 @command_app.command(help="Download and install TriggerCMD Agent")
-def install():
-    # TODO: precisa instalar dentro do /usr/share
+def install_agent():
     console.rule("Installing")
-    try:
-        TriggerCMDAgent.clone()
-    except exceptions.AlreadyCloned:
-        console.print("[blue]Info:[/] TriggerCMD is already cloned, ignoring...\n")
+    if CommandWizard.confirm("TriggerCMD will be installed in the user directory, do you want to continue?"):
+        try:
+            TriggerCMDAgent.clone()
+        except exceptions.AlreadyCloned:
+            console.print("[blue]Info:[/] TriggerCMD is already cloned, ignoring...\n")
 
-    TriggerCMDAgent.install_dependecies()
-    console.print("\n[green]Success![/] TriggerCMD Agent installed. Please type `triggercmd run`.")
+        TriggerCMDAgent.install_dependecies()
+        console.print("\n[green]Success![/] TriggerCMD Agent installed. Please type `triggercmd run`.")
+    else:
+        console.print("Exiting...")
+
+
+@command_app.command(help="Uninstall TriggerCMD")
+def uninstall():
+    # TODO: remover atalho, agent, e so entao executa um pip uninstall
+    console.rule("Uninstalling")
+    TriggerCMDUI.remove_shortcut()
+    # TriggerCMDAgent.uninstall()
+    console.print("\n[green]Success![/] TriggerCMD Agent uninstalled. Now please type \"pip uninstall triggercmd\" to remove the CLI.")
+
+
+@command_app.command(help="Install TriggerCMD Desktop App")
+def install_app():
+    console.rule("Installing")
+    TriggerCMDUI.create_shortcut()
+    console.print("\n[green]Success![/] TriggerCMD Desktop App installed. Please search by \"TriggerCMD App\".")
 
 
 @command_app.command(help="Run TriggerCMD Agent")
 def run():
     console.rule("Running")
     TriggerCMDAgent.run()
+
+@command_app.command(help="Run TriggerCMD Desktop App")
+def app(background: bool = False):
+    try:
+        console.rule("Running UI")
+        console.print("Type Ctrl+C to exit...")
+        TriggerCMDUI().start_app(background=background)
+    except KeyboardInterrupt:
+        pass

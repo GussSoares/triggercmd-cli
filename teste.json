@@ -1,0 +1,184 @@
+[
+    {
+        "allowParams": "false",
+        "command": "shutdown -r",
+        "ground": "background",
+        "trigger": "Reboot",
+        "voice": "reboot"
+    },
+    {
+        "allowParams": "false",
+        "command": "gedit",
+        "ground": "foreground",
+        "trigger": "Gnome Editor",
+        "voice": "edit"
+    },
+    {
+        "allowParams": "false",
+        "command": "yum -y update",
+        "ground": "background",
+        "trigger": "yum update",
+        "voice": "yum update"
+    },
+    {
+        "allowParams": "false",
+        "command": "apt-get -y update",
+        "ground": "background",
+        "trigger": "apt update",
+        "voice": "update"
+    },
+    {
+        "allowParams": "false",
+        "command": "code",
+        "ground": "foreground",
+        "trigger": "code",
+        "voice": "code"
+    },
+    {
+        "allowParams": "false",
+        "command": "telegram-desktop --",
+        "ground": "foreground",
+        "trigger": "telegram",
+        "voice": "telegram"
+    },
+    {
+        "allowParams": "false",
+        "command": "discord",
+        "ground": "foreground",
+        "trigger": "discord",
+        "voice": "discord"
+    },
+    {
+        "allowParams": "false",
+        "command": "env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify",
+        "ground": "foreground",
+        "trigger": "spotify",
+        "voice": "spotify"
+    },
+    {
+        "allowParams": "false",
+        "command": "konsole",
+        "ground": "foreground",
+        "trigger": "konsole",
+        "voice": "terminal"
+    },
+    {
+        "allowParams": "false",
+        "command": "echo teste",
+        "ground": "foreground",
+        "trigger": "teste3",
+        "voice": "teste3"
+    },
+    {
+        "allowParams": "false",
+        "command": "steam",
+        "ground": "foreground",
+        "trigger": "steam",
+        "voice": "steam"
+    },
+    {
+        "allowParams": "false",
+        "command": "visualboyadvance-m",
+        "ground": "foreground",
+        "trigger": "visualboy advance",
+        "voice": "emulador de gameboy"
+    },
+    {
+        "allowParams": "false",
+        "command": "visualboyadvance-m ~/Documentos/visualboy/Pokemon-Emerald.gba",
+        "ground": "foreground",
+        "trigger": "pokemon emerald",
+        "voice": "pokemon emerald"
+    },
+    {
+        "allowParams": "false",
+        "command": "firefox",
+        "ground": "foreground",
+        "trigger": "abrir firefox",
+        "voice": "firefox"
+    },
+    {
+        "allowParams": "false",
+        "command": "~/workspace/alexa/backup-terraria.sh",
+        "ground": "foreground",
+        "trigger": "backup terraria",
+        "voice": "backup terraria"
+    },
+    {
+        "allowParams": "true",
+        "command": "~/workspace/alexa/youtube.sh",
+        "ground": "foreground",
+        "trigger": "youtube",
+        "voice": "youtube"
+    },
+    {
+        "allowParams": "false",
+        "command": "~/workspace/alexa/agenda-lead.sh",
+        "ground": "foreground",
+        "trigger": "agenda lead",
+        "voice": "agenda lead"
+    },
+    {
+        "allowParams": "true",
+        "command": "~/workspace/alexa/terraria.sh",
+        "ground": "foreground",
+        "trigger": "terraria",
+        "voice": "terraria"
+    },
+    {
+        "allowParams": "true",
+        "command": "~/workspace/alexa/set-bluetooth-phone.sh",
+        "ground": "foreground",
+        "trigger": "set headset",
+        "voice": "headset"
+    },
+    {
+        "allowParams": "false",
+        "command": "~/workspace/alexa/setup-dev-dsb.sh",
+        "ground": "foreground",
+        "trigger": "ambiente dsb",
+        "voice": "ambiente dsb"
+    },
+    {
+        "allowParams": "false",
+        "command": "~/workspace/alexa/setup-dev-dsb-hub.sh",
+        "ground": "foreground",
+        "trigger": "ambiente dsb-hub",
+        "voice": "ambiente dsb hub"
+    },
+    {
+        "allowParams": "true",
+        "command": "~/workspace/alexa/teste.sh",
+        "ground": "background",
+        "trigger": "teste python",
+        "voice": "teste"
+    },
+    {
+        "allowParams": "true",
+        "command": "~/workspace/alexa/set-bluetooth-echo-dot.sh",
+        "ground": "foreground",
+        "trigger": "set echo dot",
+        "voice": "caixa de som"
+    },
+    {
+        "allowParams": "true",
+        "command": "shutdown now",
+        "ground": "foreground",
+        "trigger": "desligar notebook",
+        "voice": "notebook"
+    },
+    {
+        "allowParams": "true",
+        "command": "~/workspace/alexa/teste.sh",
+        "ground": "foreground",
+        "trigger": "testeasd",
+        "voice": "teste"
+    },
+    {
+        "allowParams": "true",
+        "command": "command",
+        "ground": "foreground",
+        "trigger": "lalala123",
+        "voice": "voice"
+    }
+]

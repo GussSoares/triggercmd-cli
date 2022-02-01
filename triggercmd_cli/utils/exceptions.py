@@ -26,3 +26,9 @@ class AlreadyInstalled(Exception):
     def __init__(self, *args: object) -> None:
         default_message = "TriggerCMD is already installed."
         super().__init__(default_message, *args)
+
+
+class OSNotSupported(Exception):
+    def __init__(self, *args: object) -> None:
+        default_message = "This operational system is not supported."
+        super().__init__(default_message, *args)

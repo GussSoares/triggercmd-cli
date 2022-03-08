@@ -17,6 +17,9 @@
 
 `triggercmd` is a CLI client for the [TRIGGERcmd][1] cloud service.
 
+## dependencies
+you need install `gobject-introspection` if you use Arch Linux.
+
 ## installation
 the `triggercmd` package is available in [PyPI](https://pypi.org/project/triggercmd/). to install, simply type the following command:
 ```

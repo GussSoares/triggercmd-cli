@@ -66,7 +66,6 @@ def remove():
     message = f"\n[green]Success![/] Command `{selected['trigger']}` removed."
 
     if CommandWizard.confirm("Are you sure you want remove this command?"):
-
         with console.status("[yellow]Please wait...[/]"):
             time.sleep(5)
             Command.remove(selected)
@@ -77,7 +76,6 @@ def remove():
 
 @command_app.command(help="List all commands.")
 def list():
-
     data = functions.load_json_file()
 
     table = Table(title="Command List", title_justify="center")
@@ -104,6 +102,13 @@ def list():
 
 @command_app.command(help="Test a commands.")
 def test(trigger: str = typer.Option("", help="Trigger name")):
+    """
+    It tests a command
+
+    :param trigger: str = typer.Option("", help="Trigger name")
+    :type trigger: str
+    """
+
     console.rule("Test a command")
 
     if not trigger:
@@ -157,8 +162,16 @@ def run():
     console.rule("Running")
     TriggerCMDAgent.run()
 
+
 @command_app.command(help="Run TriggerCMD Desktop App")
 def app(background: bool = False):
+    """
+    This function runs the UI
+
+    :param background: bool = False, defaults to False
+    :type background: bool (optional)
+    """
+
     try:
         console.rule("Running UI")
         console.print("Type Ctrl+C to exit...")
